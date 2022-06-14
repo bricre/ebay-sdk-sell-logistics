@@ -12,7 +12,7 @@ class Order extends AbstractModel
 {
     /**
      * The e-commerce platform or environment where the order was created. Use the
-     * value EBAY to get the rates available for eBay orders.
+     * value <code>EBAY</code> to get the rates available for eBay orders.
      *
      * @var string
      */
@@ -20,7 +20,7 @@ class Order extends AbstractModel
 
     /**
      * The unique ID of the order supplied by the channel of origin. For eBay orders,
-     * this would be the orderId.
+     * this would be the <b>orderId</b>.
      *
      * @var string
      */

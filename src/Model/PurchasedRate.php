@@ -5,8 +5,8 @@ namespace Ebay\Sell\Logistics\Model;
 use OpenAPI\Runtime\AbstractModel;
 
 /**
- * The &quot;rate&quot; that has been selected and purchased for the shipment, as
- * referenced by the rateId value.
+ * The "rate" that has been selected and purchased for the shipment, as referenced
+ * by the <b>rateId</b> value.
  */
 class PurchasedRate extends AbstractModel
 {
@@ -19,17 +19,18 @@ class PurchasedRate extends AbstractModel
     public $additionalOptions = null;
 
     /**
-     * The amount of the &quot;base cost&quot; for the shipment as set by the given
-     * carrier for the specified service. This cost excludes any addition costs accrued
-     * from the addition of any optional shipping options.
+     * The amount of the "base cost" for the shipment as set by the given carrier for
+     * the specified service. This cost excludes any addition costs accrued from the
+     * addition of any optional shipping options.
      *
      * @var \Ebay\Sell\Logistics\Model\Amount
      */
     public $baseShippingCost = null;
 
     /**
-     * The time zone of the destination according to Time Zone Database. For example,
-     * &quot;America/Los_Angeles&quot;.
+     * The time zone of the destination according to <a
+     * href="https://www.iana.org/time-zones" target="_blank">Time Zone Database</a>.
+     * For example, "America/Los_Angeles".
      *
      * @var string
      */
@@ -37,9 +38,11 @@ class PurchasedRate extends AbstractModel
 
     /**
      * A string value representing maximum (latest) estimated delivery time, formatted
-     * as an ISO 8601 string, which is based on the 24-hour Coordinated Universal Time
-     * (UTC) clock. Format: [YYYY]-[MM]-[DD]T[HH]:[MM]:[SS].[SSS]Z Example:
-     * 2018-08-20T07:09:00.000Z.
+     * as an <a href="https://www.iso.org/iso-8601-date-and-time-format.html"
+     * title="https://www.iso.org" target="_blank">ISO 8601</a> string, which is based
+     * on the 24-hour Coordinated Universal Time (UTC) clock.  <br><br><b>Format:</b>
+     * <code>[YYYY]-[MM]-[DD]T[HH]:[MM]:[SS].[SSS]Z</code> <br><b>Example:</b>
+     * <code>2018-08-20T07:09:00.000Z</code>.
      *
      * @var string
      */
@@ -47,7 +50,8 @@ class PurchasedRate extends AbstractModel
 
     /**
      * A string value representing minimum (earliest) estimated delivery time,
-     * formatted as an ISO 8601ISO 8601 UTC string.
+     * formatted as an <a href="https://www.iso.org/iso-8601-date-and-time-format.html"
+     * title="https://www.iso.org" target="_blank">ISO 8601</a>ISO 8601</a> UTC string.
      *
      * @var string
      */
@@ -101,8 +105,8 @@ class PurchasedRate extends AbstractModel
     public $shippingCarrierName = null;
 
     /**
-     * The unique eBay-generated ID of the shipping quote from which the seller
-     * selected a shipping rate (rateId).
+     * The unique eBay-generated ID of the <i>shipping quote</i> from which the seller
+     * selected a shipping rate (<b>rateId</b>).
      *
      * @var string
      */

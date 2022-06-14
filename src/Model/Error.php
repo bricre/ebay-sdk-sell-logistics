@@ -11,16 +11,16 @@ class Error extends AbstractModel
 {
     /**
      * The category type for this error or warning. It takes a string that can have one
-     * of three values: Application: Indicates an exception or error occurred in the
-     * application code or at runtime. Examples include catching an exception in a
-     * service's business logic, system failures, or request errors from a dependency.
-     * Business: Used when your service or a dependent service refused to continue
-     * processing on the resource because of a business rule violation such as
-     * &quot;Seller does not ship item to Antarctica&quot; or &quot;Buyer ineligible to
-     * purchase an alcoholic item&quot;. Business errors are not syntactical input
-     * errors. Request: Used when there is anything wrong with the request, such as
-     * authentication, syntactical errors, rate limiting or missing headers, bad HTTP
-     * header values, and so on.
+     * of three values:<ul><li><code>Application</code>: Indicates an exception or
+     * error occurred in the application code or at runtime. Examples include catching
+     * an exception in a service's business logic, system failures, or request errors
+     * from a dependency.</li><li><code>Business</code>: Used when your service or a
+     * dependent service refused to continue processing on the resource because of a
+     * business rule violation such as "Seller does not ship item to Antarctica" or
+     * "Buyer ineligible to purchase an alcoholic item". Business errors are not
+     * syntactical input errors.</li><li><code>Request</code>: Used when there is
+     * anything wrong with the request, such as authentication, syntactical errors,
+     * rate limiting or missing headers, bad HTTP header values, and so on.</li></ul>.
      *
      * @var string
      */
@@ -44,7 +44,8 @@ class Error extends AbstractModel
 
     /**
      * Identifies specific request elements associated with the error, if any.
-     * inputRefId's response is format specific. For JSON, use JSONPath notation.
+     * inputRefId's response is format specific. For JSON, use <i>JSONPath</i>
+     * notation.
      *
      * @var string[]
      */
@@ -70,7 +71,7 @@ class Error extends AbstractModel
 
     /**
      * Identifies specific response elements associated with the error, if any. Path
-     * format is the same as inputRefId.
+     * format is the same as <code>inputRefId</code>.
      *
      * @var string[]
      */
@@ -78,9 +79,10 @@ class Error extends AbstractModel
 
     /**
      * This optional complex field type contains a list of one or more context-specific
-     * ErrorParameter objects, with each item in the list entry being a parameter (or
-     * input field name) that caused an error condition. Each ErrorParameter object
-     * consists of two fields, a name and a value.
+     * <code>ErrorParameter</code> objects, with each item in the list entry being a
+     * parameter (or input field name) that caused an error condition. Each
+     * <code>ErrorParameter</code> object consists of two fields, a <code>name</code>
+     * and a <code>value</code>.
      *
      * @var \Ebay\Sell\Logistics\Model\ErrorParameter[]
      */

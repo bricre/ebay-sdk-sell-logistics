@@ -18,9 +18,12 @@ class Shipment extends AbstractModel
     public $cancellation = null;
 
     /**
-     * The date and time the shipment was created, formatted as an ISO 8601 string,
-     * which is based on the 24-hour Coordinated Universal Time (UTC) clock. Format:
-     * [YYYY]-[MM]-[DD]T[HH]:[MM]:[SS].[SSS]Z Example: 2018-08-20T07:09:00.000Z.
+     * The date and time the shipment was created, formatted as an <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html"
+     * title="https://www.iso.org" target="_blank">ISO 8601</a> string, which is based
+     * on the 24-hour Coordinated Universal Time (UTC) clock.  <br><br><b>Format:</b>
+     * <code>[YYYY]-[MM]-[DD]T[HH]:[MM]:[SS].[SSS]Z</code> <br><b>Example:</b>
+     * <code>2018-08-20T07:09:00.000Z</code>.
      *
      * @var string
      */
@@ -36,8 +39,9 @@ class Shipment extends AbstractModel
 
     /**
      * The direct URL the seller can use to download an image of the shipping label. By
-     * default, the file format is PDF. See downloadLabelFile for requesting different
-     * response file formats.
+     * default, the file format is PDF. See <a
+     * href="/api-docs/sell/logistics/resources/shipment/methods/downloadLabelFile">downloadLabelFile</a>
+     * for requesting different response file formats.
      *
      * @var string
      */
@@ -46,9 +50,9 @@ class Shipment extends AbstractModel
     /**
      * The seller's desired label size. The support for multi-sized labels is
      * shipping-carrier specific and if the size requested in the
-     * creaateFromShippingQuote call matches a size the carrier supports, the value
-     * will be represented here in the shipment. Currently, the only valid value is:
-     * 4&quot;x6&quot;.
+     * <b>creaateFromShippingQuote</b> call matches a size the carrier supports, the
+     * value will be represented here in the shipment. <br><br>Currently, the only
+     * valid value is: <code>4"x6"</code>.
      *
      * @var string
      */
@@ -74,8 +78,8 @@ class Shipment extends AbstractModel
 
     /**
      * The shipping rate that the seller has chosen to purchase for this shipment. Each
-     * rate, identified by a rateId, contains the offered base service, options, and
-     * shipping parameters that were selected for the package shipment.
+     * rate, identified by a <b>rateId</b>, contains the offered base service, options,
+     * and shipping parameters that were selected for the package shipment.
      *
      * @var \Ebay\Sell\Logistics\Model\PurchasedRate
      */
@@ -83,9 +87,9 @@ class Shipment extends AbstractModel
 
     /**
      * The address and contact details that should be used for item returns. Sellers
-     * have the option to define a return address that is different from their shipFrom
-     * address. If not specified, the return address defaults to the shipFrom address
-     * in the shipping quote.
+     * have the option to define a return address that is different from their
+     * <b>shipFrom</b> address. If not specified, the return address defaults to the
+     * <b>shipFrom</b> address in the shipping quote.
      *
      * @var \Ebay\Sell\Logistics\Model\Contact
      */
@@ -100,7 +104,7 @@ class Shipment extends AbstractModel
 
     /**
      * The unique eBay-assigned ID for the shipment. The ID is generated when the
-     * shipment is created by a call to createFromShippingQuote.
+     * shipment is created by a call to <b>createFromShippingQuote</b>.
      *
      * @var string
      */

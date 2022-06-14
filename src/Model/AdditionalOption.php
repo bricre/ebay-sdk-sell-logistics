@@ -14,8 +14,8 @@ use OpenAPI\Runtime\AbstractModel;
 class AdditionalOption extends AbstractModel
 {
     /**
-     * The monetary cost of the additional shipping option identified by the optionType
-     * field.
+     * The monetary cost of the additional shipping option identified by the
+     * <b>optionType</b> field.
      *
      * @var \Ebay\Sell\Logistics\Model\Amount
      */
