@@ -4,6 +4,7 @@ namespace Ebay\Sell\Logistics\Api;
 
 use Ebay\Sell\Logistics\Model\CreateShipmentFromQuoteRequest;
 use Ebay\Sell\Logistics\Model\Shipment as ShipmentModel;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Shipment extends AbstractAPI
 {
@@ -36,9 +37,9 @@ class Shipment extends AbstractAPI
      * @param CreateShipmentFromQuoteRequest $Model the create shipment from quote
      *                                              request
      *
-     * @return ShipmentModel
+     * @return ShipmentModel|UnexpectedResponse
      */
-    public function createFromShippingQuote(CreateShipmentFromQuoteRequest $Model): ShipmentModel
+    public function createFromShippingQuote(CreateShipmentFromQuoteRequest $Model)
     {
         return $this->request(
         'createFromShippingQuote',
@@ -58,9 +59,9 @@ class Shipment extends AbstractAPI
      *                           ID of the shipment you want to retrieve. The <b>shipmentId</b> value is
      *                           generated and returned by a call to <b>createFromShippingQuote</b>.
      *
-     * @return ShipmentModel
+     * @return ShipmentModel|UnexpectedResponse
      */
-    public function get(string $shipmentId): ShipmentModel
+    public function get(string $shipmentId)
     {
         return $this->request(
         'getShipment',
@@ -84,9 +85,9 @@ class Shipment extends AbstractAPI
      *                           <b>shipmentId</b> value is generated and returned by a call to
      *                           <b>createFromShippingQuote</b>.
      *
-     * @return mixed
+     * @return UnexpectedResponse
      */
-    public function downloadLabelFile(string $shipmentId): mixed
+    public function downloadLabelFile(string $shipmentId): UnexpectedResponse
     {
         return $this->request(
         'downloadLabelFile',
@@ -109,9 +110,9 @@ class Shipment extends AbstractAPI
      *                           ID of the shipment to be canceled. The <b>shipmentId</b> value is generated and
      *                           returned by a call to <b>createFromShippingQuote</b>.
      *
-     * @return ShipmentModel
+     * @return ShipmentModel|UnexpectedResponse
      */
-    public function cancel(string $shipmentId): ShipmentModel
+    public function cancel(string $shipmentId)
     {
         return $this->request(
         'cancelShipment',

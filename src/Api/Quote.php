@@ -4,6 +4,7 @@ namespace Ebay\Sell\Logistics\Api;
 
 use Ebay\Sell\Logistics\Model\ShippingQuote;
 use Ebay\Sell\Logistics\Model\ShippingQuoteRequest;
+use OpenAPI\Runtime\UnexpectedResponse;
 
 class Quote extends AbstractAPI
 {
@@ -38,9 +39,9 @@ class Quote extends AbstractAPI
      *                                      target="_blank">Marketplace ID Values</a> in the <b>Using eBay RESTful APIs</b>
      *                                      guide.
      *
-     * @return ShippingQuote
+     * @return ShippingQuote|UnexpectedResponse
      */
-    public function create(ShippingQuoteRequest $Model, array $headers = []): ShippingQuote
+    public function create(ShippingQuoteRequest $Model, array $headers = [])
     {
         return $this->request(
         'createShippingQuote',
@@ -65,9 +66,9 @@ class Quote extends AbstractAPI
      *                                <b>shippingQuoteId</b> value is generated and returned by a call to
      *                                <b>createShippingQuote</b>.
      *
-     * @return ShippingQuote
+     * @return ShippingQuote|UnexpectedResponse
      */
-    public function get(string $shippingQuoteId): ShippingQuote
+    public function get(string $shippingQuoteId)
     {
         return $this->request(
         'getShippingQuote',
